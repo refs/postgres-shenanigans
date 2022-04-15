@@ -1,0 +1,10 @@
+services:
+  postgres:
+    image: mypg
+    command: postgres -c shared_preload_libraries=pgaudit
+    ports:
+      - 5432:5432
+#    environment:
+#      - POSTGRES_PASSWORD=mysecretpassword
+#    volumes:
+#      - ./pgaudit:/vol1
